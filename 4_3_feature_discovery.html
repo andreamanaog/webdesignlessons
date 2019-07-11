@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 
+<!-- <style>
+  h5 {
+    padding: 50px;
+  }
+
+
+</style> -->
+
 <head>
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -125,26 +133,32 @@
     <!-- START HERE -->
 
     <!-- FEATURE DISCOVERY -->
-    <a>Open Tap Target</a>
-    <a>Close Tap Target</a>
+    <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">Open Tap Target</a>
+    <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('close')">Close Tap Target</a>
 
-    <div>
-      <a>
-        <i></i>
+    <!-- <div class="row">
+        <div class=" fixed-action-btn col s6">
+        </div>
+      </div> -->
+
+    <div class="fixed-action-btn" onclick="$('.tap-target').tapTarget('open')"  >
+      <a id="menu" class="btn btn-floating btn-large cyan">
+        <i class="material-icons">menu</i>
       </a>
     </div>
 
-    <div>
-      <div>
-        <div>
+    <div class="tap-target-wrapper">
+      <div class="tap-target cyan" data-activates="menu">
+        <div class="tap-target-content white-text">
           <h5>Hello World</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident cupiditate dolores. Impedit cum asperiores
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident cupiditate dolores. 
+            Impedit cum asperiores
             a aspernatur ullam esse id!</p>
         </div>
       </div>
-      <div>
-        <a>
-          <i></i>
+      <div class="tap-target-wave">
+        <a class="btn btn-floating btn-large cyan tap-target-origin">
+          <i class="material-icons" >menu</i>
         </a>
       </div>
     </div>
